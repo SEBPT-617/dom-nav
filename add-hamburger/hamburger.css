@@ -1,0 +1,80 @@
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+.navItem {
+    display: inline-block;
+}
+
+.link,
+a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.navItem:hover {
+    background-color: #555;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 150px;
+    /* z-index: 1; */
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(138, 52, 52);
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .navItem {
+        display: none;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-list.open {
+        display: flex;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        position: static;
+    }
+}
